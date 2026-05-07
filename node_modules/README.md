@@ -1,0 +1,149 @@
+# Express Search Server 🚀
+
+This project is a beginner-friendly backend application built using Node.js and Express.js.
+It demonstrates how servers work, how routes are created, and how query parameters are handled in real-world web applications.
+
+The server listens on port `8080` and responds to user requests through different routes.
+
+---
+
+# 📌 Features
+
+* Create an Express server
+* Handle routes using `app.get()`
+* Use query parameters with `req.query`
+* Send responses using `res.send()`
+* Return HTML, text, and JSON data
+* Beginner-friendly project structure
+
+---
+
+# 🌍 Real-Life Example
+
+When you search something on websites like:
+
+* Google
+* YouTube
+* Amazon
+* Instagram
+
+The search keyword is sent as a **query parameter**.
+
+Example:
+
+```bash
+https://www.google.com/search?q=mobile
+```
+
+Here:
+
+* `q` = query key
+* `mobile` = value entered by user
+
+Your Express project works in the same way:
+
+```bash
+http://localhost:8080/search?q=laptop
+```
+
+Output:
+
+```bash
+search page for query: laptop
+```
+
+---
+
+# 🛠 Technologies Used
+
+* Node.js
+* Express.js
+* JavaScript
+
+---
+
+# 📂 Project Structure
+
+```bash
+project-folder/
+│
+├── node_modules/
+├── package.json
+├── package-lock.json
+├── index.js
+└── README.md
+```
+
+---
+
+# ▶️ How to Run Project
+
+## 1️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+## 2️⃣ Start the server
+
+```bash
+node index.js
+```
+
+## 3️⃣ Open browser
+
+```bash
+http://localhost:8080/search?q=phone
+```
+
+---
+
+# 📖 Example Routes
+
+## Root Route
+
+```js
+app.get("/", (req, res) => {
+   res.send("Home Page");
+});
+```
+
+## Search Route
+
+```js
+app.get("/search", (req, res) => {
+
+   let { q } = req.query;
+
+   res.send(`search page for query: ${q}`);
+});
+```
+
+---
+
+# 🎯 Learning Outcome
+
+After completing this project, you will understand:
+
+* What is Express.js
+* How backend servers work
+* What are routes
+* What are query parameters
+* How client and server communicate
+* Basic API concepts
+
+---
+
+# 🚀 Future Improvements
+
+* Add POST request handling
+* Connect MongoDB database
+* Create Login/Register system
+* Add frontend using React.js
+* Create REST API
+
+---
+
+# 👨‍💻 Author
+
+Utsav Kalathiya
